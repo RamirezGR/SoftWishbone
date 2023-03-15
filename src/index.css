@@ -366,7 +366,7 @@ textarea{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0 15px;
+  padding: 25px 15px;
 }
 .modal-wrapper h2{
   color: #121212;
@@ -381,18 +381,34 @@ textarea{
 @media screen and (max-width:800px) {
   .modal-wrapper{
     flex-direction: column;
+    width: 80%;
   }
-  
+  .modal-wrapper h2,
+  .modal-wrapper p,
+  .modal-wrapper .quantity{
+    margin-bottom: 15px;
+  }
 }
 /* SHOP */
 .shop{
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 .shop .product-card{
   width: 30%;
+}
+@media screen and (max-width: 900px) {
+  .shop .product-card{
+    width: 50%;
+  }
+}
+@media screen and (max-width:480px){
+  .shop .product-card{
+    width: 45%;
+  }
 }
 /* QUANTITY */
 .quantity{
@@ -400,9 +416,19 @@ textarea{
   align-items: center;
   justify-content: space-between;
   border: 1px solid black;
-  width:150px;
+  border-radius: 15px;
+  padding: 0;
+  margin: 0;
+  width: 150px;
+}
+.quantity p{
+  font-size: 24px;
+  margin-bottom: 0;
 }
 .quantity button{
-  border: 1px solid black;
+  margin: 0;
   background: none;
+  border-radius: none;
+  border: none;
+  color: var(--licorice);
 }
