@@ -1,0 +1,408 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --font-kanit:'Kanit', sans-serif;
+  --font-nova: 'Nova Mono', monospace;
+  --font-righteous: 'Righteous', cursive;
+  --font-tilt: 'Tilt Neon', cursive;
+  --font-markazi: 'Markazi Text', serif;
+  --jet: #3C393Bff;
+  --cream: #FAFAC4ff;
+  --licorice: #231A13ff;
+  --night: #090B0Cff;
+  --coffee: #73543Eff;
+}
+h1{
+  font-family: var(--font-righteous);
+  font-size: clamp(2.5rem, 0.9375rem + 5vw, 3.75rem);
+  color: var(--desert-sand);
+  color: var(--cream);
+}
+h2{
+  font-family: var(--font-nova);
+}
+p{
+  font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+  font-family: var(--font-tilt);
+  color: var(--coffee);
+}
+.container{
+  background: var(--night);
+  top:0;
+  padding: 13vh 5%;
+}
+.hero{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-content{
+  width: 100%;
+}
+.hero-content h1{
+  background: #603813;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b29f94, #603813);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b29f94, #603813); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+.hero-content p{
+  margin-bottom: 20px;
+}
+button{
+  padding: 10px 15px;
+  font-family: var(--font-righteous);
+  border-radius: 10px;
+  font-size: 16px;
+  background: var(--cream);
+  color: var(--jet);
+  cursor: pointer;
+  margin-right: 15px;
+}
+.btn2{
+  background: none;
+  border: 3px solid var(--coffee);
+  color: var(--cream);
+}
+/* Hero-image */
+.hero-images{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.image1{
+  background: url('images/chess-photo1.png');
+}
+.image2{
+  background: url('images/chess-photo2.png');
+}
+.image3{
+  background: url('images/chess-photo3.png');
+}
+.image1, .image2, .image3{
+  width: 70%;
+  height: 70%;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(40);
+  border-radius: 15px;
+}
+.active{
+  transform: scale(1.3);
+  z-index: 5;
+  aspect-ratio: 1/1;
+  filter: none;
+}
+@media screen and (max-width:1024px) {
+  .hero{
+      flex-direction: column-reverse;
+  }
+}
+/* end of Hero Section */
+.services{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 5vh 5%;
+  background: url('images/chess1.png');
+  background-position: center;
+  background-size: cover;
+}
+.service-card{
+  position: relative;
+  width: 400px;
+  background: var(--licorice);
+  padding: 20px 25px;
+  border-radius: 15px;
+  z-index: 10;
+}
+.service-wrapper{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(7px);
+}
+.services-image img{
+  width: 100%;
+  border-radius: 15px;
+}
+/* END OF SERVICES */
+/* ITEM */
+.products{
+  background: var(--night);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.product-card{
+  margin: 13vh 0;
+  position: relative;
+  color: var(--cream);
+  display: flex;
+  height: 150px;
+  width: 100%;
+}
+.product-card:hover{
+  transform: scale(1.2);
+  transition: .5s ease-in;
+  background: #121212;
+  border-radius: 15px;
+  z-index: 5;
+  padding: 10px 15px;
+}
+.product-contents{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 10px;
+}
+.product-image{
+  height: 100%;
+  aspect-ratio: 3/2;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+.product-viewbtn{
+  font-size: 12px;
+  padding: 5px 10px;
+  width: 100px;
+  
+}
+@media screen and (max-width: 800px) {
+  .product-card{
+      flex-direction: column;
+      height: max-content;
+  }
+}
+@media screen and (max-width:480px) {
+  .products{
+      overflow-x: hidden;
+  }
+}
+/* ABOUT */
+.about{
+  position: relative;
+  display: flex;
+  padding: 26vh 5%;
+  gap: 20px;
+  background-image: url('images/chess-photo3.png');
+  background-position: center;
+  background-size: cover;
+}
+.about-image{
+  position: relative;
+  background-image: url('images/chess-photo1.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.about-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: rgba( 21, 18, 18, 0.95 );
+}
+.about-content{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.about-content > p{
+  margin-top: 20px;
+}
+.about-content > button{
+  margin-top: 20px;
+}
+@media screen and (max-width:800px) {
+  .about{
+      flex-direction: column;
+  }
+}
+/* END OF ABOUT */
+/* SPACER */
+.spacer{
+  position: relative;
+  text-align: center;
+}
+.spacer h1,
+.spacer p{
+  margin-bottom: 20px;
+}
+/* END */
+/* CONTACT */
+.contact{
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-image: url('images/chess1.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  gap: 50px;
+}
+.contact-details,
+.form{
+  position: relative;
+}
+.contact-wrapper{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.918);
+}
+.contact-details{
+  width: 100%;
+  display: flex;
+  color: var(--coffee);
+}
+.contact-card{
+  background: #121212;
+  padding: 15px 5px;
+  margin-bottom: 20px;
+  color: #fff;
+  border-radius: 15px;
+  width: 100%;
+  margin-right: 10px;
+}
+.contact-card h2{
+  font-family: var(--font-kanit);
+  margin-bottom: 15px;
+}
+.form h1{
+  margin-bottom: 20px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+input, textarea{
+  font-family: var(--font-kanit);
+  font-size: 14px;
+  text-indent: 5px;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #fff;
+  background: none;
+  border-radius: 10px;
+}
+textarea{
+  width: 100%;
+}
+@media screen and (max-width: 800px){
+  .contact{
+      flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact-details{
+      flex-direction: column;
+  }
+}
+/* MODAL */
+.modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 98;
+}
+.modal-wrapper{
+  position: relative;
+  background: #423d3d;
+  width: 50%;
+  display: flex;
+  border-radius: 15px;
+}
+.close-btn{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.modal-content{
+  width: 100%;
+  background: #b8b2b2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 15px;
+}
+.modal-wrapper h2{
+  color: #121212;
+  z-index: 99;
+}
+.modal-image{
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width:800px) {
+  .modal-wrapper{
+    flex-direction: column;
+  }
+  
+}
+/* SHOP */
+.shop{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+.shop .product-card{
+  width: 30%;
+}
+/* QUANTITY */
+.quantity{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  width:150px;
+}
+.quantity button{
+  border: 1px solid black;
+  background: none;
+}

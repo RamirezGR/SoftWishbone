@@ -1,0 +1,91 @@
+
+:root{
+    --font-kanit:'Kanit', sans-serif;
+    --font-nova: 'Nova Mono', monospace;
+    --font-righteous: 'Righteous', cursive;
+    --font-tilt: 'Tilt Neon', cursive;
+    --font-markazi: 'Markazi Text', serif;
+    --jet: #3C393Bff;
+    --cream: #FAFAC4ff;
+    --licorice: #231A13ff;
+    --night: #090B0Cff;
+    --coffee: #73543Eff;
+    --desert-sand: #D9BCA9ff;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    background: var(--night);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    padding: 0 5%;
+    font-family: var(--font-kanit);
+    color: var(--cream);
+    z-index: 90;
+}
+.navbar .logo img{
+    width: 75px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.menu-icon{
+    display: none;
+}
+.nav-item{
+    position: relative;
+    text-decoration: none;
+    color: var(--cream);
+}
+.nav-item::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: var(--desert-sand);
+    bottom: 0;
+    border-radius: 2px;
+    transition: width 0.2s;
+    left: 0;
+}
+.nav-item:hover::after{
+    width: 100%;
+}
+.activated::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--desert-sand);
+    bottom: 0;
+    border-radius: 2px;
+    transition: width 0.2s;
+    left: 0;
+}
+@media screen and (max-width:800px){
+    .menu-icon{
+        display: block;
+    }
+    .nav-links{
+        top: 10vh;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--night);
+        transition: 0.3s;
+        left: 100%;
+    }
+    .activate{
+        left: 0;
+    }
+    .login-btn{
+        display: none;
+    }
+}
