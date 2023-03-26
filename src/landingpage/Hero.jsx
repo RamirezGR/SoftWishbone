@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link} from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -7,7 +8,9 @@ const Hero = () => {
                 <h1>Let's play, let's bond.</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis massa eget urna sodales vulputate. Nunc et turpis velit. Donec sagittis pretium faucibus.</p>
                 <button className="btn1">Buy Now</button>
+                <Link to="/shop">
                 <button className="btn2">View More</button>
+                </Link>
             </div>
             <div className="hero-images">
                 <div className="image1"></div>

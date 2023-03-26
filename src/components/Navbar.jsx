@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import './Navbar.css'
 import { FaBars, FaShoppingCart, FaTimes} from 'react-icons/fa'
 import Button from "./Button";
 
 const Navbar = () => {
+  const location = useLocation();
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -63,8 +64,8 @@ const Navbar = () => {
           <Button 
             title='Log-In'
           />
-          <NavLink to='/cart'>
-            <Button title= {<FaShoppingCart/>}/>
+          <NavLink>
+            {location.pathname === "/shop" && <Button title= {<FaShoppingCart/>}/>}
           </NavLink>
         </div>
     </nav>

@@ -5,10 +5,11 @@ export default [
             product:{
                 name: "GLASS",
                 price: "8,500.00",
-                image: "images/chessglass-board1.png",
+                image: "images/chess-board1.png",
                 status: "HOT",
                 quantity: 55
-            }
+            },
+            addedToCart: false,
         },
         {
             id:2,
@@ -16,10 +17,11 @@ export default [
             product:{
                 name: "PLASTIC",
                 price: "3,500.00",
-                image: "images/chess-board2.png",
+                image: "images/chess-board1.png",
                 status: "NEW",
                 quantity: 105
-            }
+            },
+            addedToCart: false,
         },
         {
             id:3,
@@ -27,10 +29,11 @@ export default [
             product:{
                 name: "WOOD",
                 price: "5,500.00",
-                image: "images/chess-board3.png",
+                image: "images/chess-board1.png",
                 status: "",
                 quantity: 75
-            }
+            },
+            addedToCart: false,
         },
         {
             id:4,
@@ -41,7 +44,8 @@ export default [
                 image: "images/monopoly-board1.png",
                 status: "New",
                 quantity: 55
-            }
+            },
+            addedToCart: false,
         },
         {
             id:5,
@@ -52,7 +56,8 @@ export default [
                 image: "images/monopoly-board2.png",
                 status: 'HOT',
                 quantity: 35
-            }
+            },
+            addedToCart: false,
         },
         {
             id:6,
@@ -64,6 +69,7 @@ export default [
                 status: "",
                 quantity: 175
               },
+              addedToCart: false,
         },
         {
             id:7,
@@ -74,7 +80,8 @@ export default [
                 image: "images/scrabble-board1.png",
                 status: 'HOT',
                 quantity: 45
-            }
+            },
+            addedToCart: false,
         },
         {
             id:8,
@@ -85,7 +92,8 @@ export default [
                 image: "images/scrabble-board2.png",
                 status: 'NEW',
                 quantity:  65
-            }
+            },
+            addedToCart: false,
         },
         {
             id:9,
@@ -96,7 +104,8 @@ export default [
                 image: "images/scrabble-board3.png",
                 status: '' ,
                 quantity: 98
-            }
+            },
+            addedToCart: false,
         },
         
         
