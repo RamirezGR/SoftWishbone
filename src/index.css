@@ -424,3 +424,75 @@ textarea{
   border: none;
   color: var(--licorice);
 }
+/* Cart */
+.cart{
+  position: relative;
+  display: flex;
+  align-items: start;
+  min-height: 100vh;
+  padding: 13vh 5%;
+  place-items: center;
+  background: #121212;
+  gap: 30px;
+}
+table{
+  position: relative;
+  width: 70%;
+  gap: 3px;
+  font-family: var(--font-kanit);
+  font-size: 1.2rem;
+}
+table p{
+  font-family: var(--font-markazi);
+  font-size: 1.8rem;
+}
+table img{
+  width: 75px;
+}
+th{
+  border: 1px solid white;
+  padding: 10px;
+  background: var(--desert-sand);
+}
+td{
+  text-align: center;
+  padding: 10px;
+}
+tr:nth-child(even){
+  background: var(--desert-sand);
+}
+tr:nth-child(odd){
+  background: var(--licorice);
+}
+.table-image{
+  position: relative;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-around;
+}
+.remove-item{
+  font-size: 1.5rem;
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+}
+.remove-item:hover{
+  color: red;
+}
+.item{
+  padding: 10px;
+}
+.order-details{
+  position: relative;
+  margin: 20px 0;
+  padding: 20px 10px;
+  background: var(--desert-sand);
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px black;
+  width: 25%;
+  place-self: start;
+}
+.order-details h2, .order-details p {
+  font-family: var(--font-kanit);
+  color: var(--night);
+}

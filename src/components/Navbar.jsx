@@ -64,7 +64,7 @@ const Navbar = () => {
           <Button 
             title='Log-In'
           />
-          <NavLink>
+          <NavLink to='/cart'>
             {location.pathname === "/shop" && <Button title= {<FaShoppingCart/>}/>}
           </NavLink>
         </div>

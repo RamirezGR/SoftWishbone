@@ -3,33 +3,8 @@ import {FaTimes} from 'react-icons/fa'
 import QuantityProduct from '../shop/QuantityProduct'
 
 const ViewProductModal = (props) => {
-    /* quantity of products */
-    const [quantity, setQuantity] = useState(1)
-    const addQuantity = () => {
-        if(quantity < props.quantity){
-            setQuantity(quantity + 1)
-        }
-    }
-    const minusQuantity = () => {
-        if(!quantity){
-            setQuantity(quantity)
-        } else{
-            setQuantity(quantity-1)
-        }
-    }
-    /* pushing product to array */
-    const [cart, setCart] = useState([])
-        const addProductToCart = () => {
-                setCart(()=> ({
-                        name: `${props.name}`,
-                        price: `${props.price}`,
-                        quantity: `${quantity}`,
-                }) )
-                /*set quantity back to 0*/
-                setQuantity(0)
-                console.log(cart)
-        }
-
+    
+   
     if (!props.view){
         return null
     }
@@ -38,18 +13,18 @@ const ViewProductModal = (props) => {
         <div className="modal-wrapper" onClick={(e) => e.stopPropagation()}>
             <div className="close" onClick={props.onClose}><FaTimes className='close-btn'/></div>
             <div className="modal-image" 
-                style={{backgroundImage:`url(${props.image})`}}>
+                style={{backgroundImage:`url(${props.selectedProduct.product.image})`}}>
             </div>
             <div className="modal-content">
-                <h2>{props.name}</h2>
-                <p>{props.price}</p>
-                <p>Available: {props.quantity}</p>
+                <h2>{props.selectedProduct.product.name}</h2>
+                <p>{props.selectedProduct.product.price}</p>
+                <p>Available: {props.selectedProduct.product.quantity}</p>
                 <QuantityProduct 
-                     addQuantity={addQuantity}
-                     minusQuantity={minusQuantity}
-                     quantityProduct={quantity}
+                     addQuantity={props.addQuantity}
+                     minusQuantity={props.minusQuantity}
+                     quantityProduct={props.quantityProductToItems}
                 />
-                <button onClick={addProductToCart}>Add to Cart</button>
+                <button onClick={props.handleAddToCart}>Add to Cart</button>
             </div>
         </div>
     </div>

@@ -9,14 +9,25 @@ import About from "./landingpage/About";
 import Landingpage from "./landingpage/Landingpage";
 import Cart from "./shop/Cart";
 import Shop from "./shop/Shop";
-import productsData from './landingpage/product.js'
 
 function AppLayout() {
+
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {
+    setCartItems([...cartItems, product]);
+  };
+
+  const removeFromCart = (product) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== product.id);
+    setCartItems(updatedCartItems);
+  };
 
   return (
      <>
       <Navbar />
-      <Outlet />
+      <Outlet 
+      context={{ addToCart, removeFromCart, cartItems}}/>
     </>
   );
 }

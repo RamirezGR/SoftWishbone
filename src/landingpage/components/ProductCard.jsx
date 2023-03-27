@@ -2,11 +2,10 @@ import React, {useState} from 'react'
 import ViewProductModal from '../ViewProductModal'
 
 const ProductCard = (props) => {
-  const [clickViewProducts, setClickViewProducts] = useState(false)
 
   return (
     <>
-         <div className="product-card" onClick = {() => setClickViewProducts(true)}>
+         <div className="product-card" onClick = {props.onClick}>
             <div className="product-image">
               {props.status && <p style={{background:'red', color:'white', width: 'fit-content', padding:'5px 7px', position:'absolute'}}>{props.status}</p> }
               <div className='image-wrapper'>
@@ -19,15 +18,17 @@ const ProductCard = (props) => {
             </div>
         </div>
         <ViewProductModal
-          name={props.name}
-          price={props.price} 
-          image={props.image}
-          quantity={props.quantity}
-          view={clickViewProducts} 
-          onClose={() => setClickViewProducts(false)}
+          view={props.clickViewProducts} 
+          onClose={props.onClose}
+          selectedProduct={props.selectedProduct}
+          handleAddToCart={props.handleAddToCart}
+          addQuantity={props.addQuantity}
+          minusQuantity={props.minusQuantity}
+          quantityProductToItems={props.quantityProductToItems}
         />
     </>
   )
 }
 
 export default ProductCard
+
